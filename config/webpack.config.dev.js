@@ -123,10 +123,6 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.tsx?$/,
-        loader: 'ts-loader'
-      },
-      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
@@ -154,6 +150,10 @@ module.exports = {
               // directory for faster rebuilds.
               cacheDirectory: true,
             },
+          },
+          {
+            test: /\.tsx?$/,
+            loader: 'ts-loader'
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.

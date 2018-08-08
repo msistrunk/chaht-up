@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "module": "es2015",
     "jsx": "react",
     "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   }
 }
