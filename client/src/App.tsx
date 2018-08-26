@@ -1,15 +1,27 @@
 import React from 'react';
+import axios from 'axios';
 
-// function yo(a: number, b: string) {
-//   return a + parseInt(b, 10);
-// }
+class App extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      data: 'Fetching...',
+    };
+  }
 
-const test = 'test';
+  componentDidMount() {
+    axios.get('./api')
+      .then(res => this.setState({ data: res.data.message }));
+  }
 
-const App = () => (
-  <div>
-    {test}
-  </div>
-);
+  render() {
+    const { data } = this.state;
+    return (
+      <div>
+        {data}
+      </div>
+    );
+  }
+}
 
 export default App;

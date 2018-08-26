@@ -27,11 +27,6 @@
 					".ts"
 				]
 			}
-		],
-			"sort-imports": ["error", {
-			"ignoreCase": false,
-			"ignoreMemberSort": false,
-			"memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-    }]
+		]
 	}
 }
