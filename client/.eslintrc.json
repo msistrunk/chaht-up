@@ -1,66 +1,37 @@
 {
-  "parser": "babel-eslint",
-  "extends": "airbnb",
-  "env": {
-    "browser": true,
-    "jest": true
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".ts", ".tsx", ".js"]
-      }
-    }
-  },
-  "rules": {
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx", ".tsx", ".ts"]
-      }
-    ]
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "tslint/config": [
-          2,
-          {
-            "rules": {
-              "no-any": 1,
-              "no-empty-interface": 1,
-              "typedef": [
-                true,
-                "call-signature",
-                "index-signature",
-                "parameter",
-                "property-declaration",
-                "member-variable-declaration"
-              ],
-              "ban-types": [true, ["Object"]],
-              "typedef-whitespace": [
-                true,
-                {
-                  "call-signature": "nospace",
-                  "index-signature": "nospace",
-                  "parameter": "nospace",
-                  "property-declaration": "nospace",
-                  "variable-declaration": "nospace"
-                },
-                {
-                  "call-signature": "onespace",
-                  "index-signature": "onespace",
-                  "parameter": "onespace",
-                  "property-declaration": "onespace",
-                  "variable-declaration": "onespace"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  ],
-  "plugins": ["tslint"]
+	"parser": "babel-eslint",
+	"extends": "airbnb",
+	"env": {
+		"browser": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".ts",
+					".tsx",
+					".js",
+					".jsx"
+				]
+			}
+		}
+	},
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx",
+					".tsx",
+					".ts"
+				]
+			}
+		],
+			"sort-imports": ["error", {
+			"ignoreCase": false,
+			"ignoreMemberSort": false,
+			"memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }]
+	}
 }

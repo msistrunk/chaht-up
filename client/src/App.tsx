@@ -1,32 +1,15 @@
-import React, { Component } from 'react';
-// tslint:disable
-/* eslint-disable */
+import React from 'react';
 
-export default class App extends Component {
-  state: any = {
-    users: [],
-  }
+// function yo(a: number, b: string) {
+//   return a + parseInt(b, 10);
+// }
 
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
+const test = 'test';
 
-  render() {
-    return (
-      <div>
-        <h1>
-          Users
-        </h1>
-        <ul>
-          {this.state.users.map(user => (
-            <li key={user.id}>
-              {user.username}
-            </li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div>
+    {test}
+  </div>
+);
+
+export default App;
